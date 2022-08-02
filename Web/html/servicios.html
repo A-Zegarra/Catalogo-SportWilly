@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Sport Willy</title>
+</head>
+<body>
+    <!-- CABECERA -->
+  <header>
+    <img src="../img/logo.jpg" class="logo">
+    <div class="titulo">
+      <h1>Sport Willy</h1>
+      <p>Repuestos para automoviles y más! </p>
+    </div>
+    <div class="social">
+      <a href="http://facebook.com"><img src="../img/facebook.png" alt="facebook"></a>
+      <a href="http://instagram.com"><img src="../img/instagram.png" alt="instagram"></a>
+      <a href="http://web.whatsapp.com"><img src="../img/whatsapp.png" alt="whatsapp"></a>
+      <a href="http://localhost/NUEVA%20WEB/php/ingreso.php?cerrar_sesion=1"><img src="../img/cerrar-sesion.png" alt="cerrar-sesion"></a>
+    </div>
+  </header>
+<!-- NAVEGACION -->
+<nav class="wrap">
+  <ul class="tabs">
+    <li><a href="../index.html"><span class="tab-text">Inicio</span></a></li>
+    <li><a href="../php/productos.php"><span class="tab-text">Productos</span></a></li>
+    <li><a href="servicios.html"><span class="tab-text">Servicios</span></a></li>
+    <li><a href="../php/contactanos.php"><span class="tab-text">Contáctanos</span></a></li>
+    <li><a href="nosotros.html"><span class="tab-text">Nosotros</span></a></li>
+    <li><a href="../php/mantenimiento.php"><span class="tab-text">Mantenimiento</span></a></li>
+    <li><a href="../php/ingreso.php"><span class="tab-text">Ingresa</span></a></li>
+  </ul>
+</nav>
+<!-- SECCION CUERPO -->
+
+<!-- <section class="galeria">
+  <h1>Nuestros Servicios</h1>
+  <div class="div-servicios">
+      <img src="../img/servicios/servicios1.jpg" class="imagen-servicios">
+      <img src="../img/servicios/servicios2.jpg" class="imagen-servicios">
+      <img src="../img/servicios/servicios3.jpg" class="imagen-servicios">
+      <img src="../img/servicios/servicios4.jpg" class="imagen-servicios">
+  </div>
+</section>  -->
+
+<div id="hcg-slider-1" class="hcg-slider">
+  <div class="hcg-slide-container">
+    <div class="hcg-slider-body">
+      <a class="hcg-slides animated" style="display:block">
+        <span class="hcg-slide-number">1/5</span>
+        <img src="https://html-generator.com/uploads/images/2022/07/19/84461RJVXZQSDOO.jpg" alt="">
+        <span class="hcg-slide-text"></span>
+      </a>
+    </div>
+  </div>
+  <div class="hcg-slide-dot-control"></div>
+  </div>
+  
+
+
+
+
+
+
+
+<section class="caja">
+
+  <div class="contenedoranimado">
+  <div class="caja__columna">
+      <svg> <rect></rect></svg>
+      <div class="textoan">
+          <h2>Venta de Accesorios</h2>
+             <p>Encuentra lo que buscas en nuestro catalogo de Accesorios .Todo lo que necesitas estara aqui equipa tu vehiculo con las mejores marcas y modelos .Encuentra cobertores,objetos de Limpieza, tunning , equipos de sonido , pantallas android y mas .</p>
+
+      </div>
+  </div>    
+  <div class="contenedoranimado">
+      <div class="caja__columna">
+          <svg> <rect></rect></svg>
+          <div class="textoan">
+              <h2>Venta de Repuestos</h2>
+                 <p>Encuentra respuestos como iluminacion , aditivos pronto encontraras mas .Todo lo que estas buscando pronto lo encontras aqui .</p>
+
+          </div>
+      </div>    
+  </div>
+</section>
+<script>
+  (function(){
+  //If you want to include more images, add the link name and URL of the image in the array list below.
+    let images_list = [
+      {"url":"https://html-generator.com/uploads/images/2022/07/19/84461RJVXZQSDOO.jpg","name":"","link":""},
+      {"url":"https://html-generator.com/uploads/images/2022/07/19/862803AQBPYZ02P.jpg","name":"","link":""},
+      {"url":"https://html-generator.com/uploads/images/2022/07/19/85537XM1G9_6S_B.jpg","name":"","link":""},
+      {"url":"https://html-generator.com/uploads/images/2022/07/19/85226YJYM_FCJ7O.jpg","name":"","link":""}
+    ];
+  
+    let slider_id = document.querySelector("#hcg-slider-1");
+  
+    // append all images
+    let dots_div = "";
+    let images_div = "";
+    for (let i = 0; i < images_list.length; i++) {
+      // if no link without href="" tag
+      let href = (images_list[i].link == "" ? "":' href="'+images_list[i].link+'"');
+      images_div += '<a'+href+' class="hcg-slides animated"'+(i === 0 ? ' style="display:block"':'')+'>'+
+              '<span class="hcg-slide-number">'+(i+1)+'/'+images_list.length+'</span>'+
+              '<img src="'+images_list[i].url+'" alt="'+images_list[i].name+'">'+
+              '<span class="hcg-slide-text">'+images_list[i].name+'</span>'+
+             '</a>';
+      dots_div += '<span class="hcg-slide-dot'+(i === 0 ? ' dot-active':'')+'" data-id="'+i+'"></span>';
+    }
+    slider_id.querySelector(".hcg-slider-body").innerHTML = images_div;
+    slider_id.querySelector(".hcg-slide-dot-control").innerHTML = dots_div;
+  
+    let slide_index = 0;
+  
+    let images = slider_id.querySelectorAll(".hcg-slides");
+    let dots = slider_id.querySelectorAll(".hcg-slide-dot");
+    function showSlides() {
+      if (slide_index > images.length-1) {
+        slide_index = 0;
+      }
+      if (slide_index < 0) {
+        slide_index = images.length-1;
+      }
+      for (let i = 0; i < images.length; i++) {
+        images[i].style.display = "none";
+        dots[i].classList.remove("dot-active");
+        if (i == slide_index) {
+          images[i].style.display = "block";
+          dots[i].classList.add("dot-active");
+        }
+      }
+    }
+  
+    function dot_click(event) {
+      slide_index = event.target.dataset.id;
+      showSlides();
+    }
+  
+    for (let i = 0; i < dots.length; i++) {
+      dots[i].addEventListener("click", dot_click, false);
+    }
+    setInterval(function(){
+      slide_index++;
+      showSlides();
+    }, 2000);
+  
+  })();
+  </script>
+
+
+
+
+<!-- PIE DE PAGINA -->
+  <footer>
+    <h6>Copyright © Auto Servicio Willy 2022 Todos los derechos reservados.</h6>
+  </footer>
+</body>
+</html>
